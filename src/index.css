@@ -14,6 +14,32 @@
   width: 75%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #020230),
     url("./assets/bg.jpg") center;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  height: 50%;
+  position: relative;
+}
+
+.timer {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  border: 5px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 400;
+  position: absolute;
+  bottom: 10px;
+  left: 80px;
+}
+
+.bottom {
+  height: 50%;
 }
 .pyramid {
   width: 25%;
@@ -49,4 +75,92 @@
 .moneyListItemAmount {
   font-size: 20px;
   font-weight: 300;
+}
+
+/* questionandanswer  */
+
+.QNA_box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.question {
+  width: 80%;
+  background: linear-gradient(#100241, black);
+  border: 2px solid white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.answers {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.answer {
+  width: 40%;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 15px;
+  background: linear-gradient(#0e0124, #22074d);
+  margin: 0 10px 20px 10px;
+  /* top right bottom left  */
+  font-size: 20px;
+  font-weight: 300;
+  cursor: pointer;
+  transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.answer:hover,
+.answer:active {
+  background: mediumblue;
+}
+
+.answer.correct {
+  animation: correct 3s ease forwards;
+}
+.answer.wrong {
+  animation: wrong 3s ease forwards;
+}
+@keyframes correct {
+  0%,
+  22%,
+  42% {
+    background: mediumblue;
+  }
+
+  20%,
+  40% {
+    background: linear-gradient(#0e0124, #22074d);
+  }
+
+  60%,
+  100% {
+    background: green;
+  }
+}
+
+@keyframes wrong {
+  0%,
+  22%,
+  42% {
+    background: mediumblue;
+  }
+
+  20%,
+  40% {
+    background: linear-gradient(#0e0124, #22074d);
+  }
+
+  60%,
+  100% {
+    background: crimson;
+  }
 }

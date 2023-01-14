@@ -1,4 +1,4 @@
-const moneyItem = [
+export const  data = [
 {id:1,amount:1000},
 {id:2,amount:2000},
 {id:3,amount:4000},
@@ -12,4 +12,4 @@ const moneyItem = [
 {id:11,amount:5000000},
 {id:12,amount:10000000},
 {id:13,amount:50000000}
-]
+].reverse()
